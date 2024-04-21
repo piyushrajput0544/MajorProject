@@ -1,0 +1,18 @@
+import javax.swing.*;
+import java.awt.*;
+class Jpdemo extends JPanel
+{
+	ImageIcon img1;
+	Image on;
+	Jpdemo()
+	{
+
+	img1=new ImageIcon("image9.JPG");
+	on=img1.getImage();
+	}
+    public void paintComponent(Graphics g)
+    {
+	super.paintComponent(g);
+	g.drawImage(on,0,0,this);
+    }	
+}

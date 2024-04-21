@@ -1,0 +1,91 @@
+import java.awt.*;
+import javax.swing.*;
+class AdminPanel extends JPanel
+{
+	ImageIcon img,img1,img2,img3,img4,img5,img6;
+	Image  on,on1,on2,on3,on4,on5,on6;
+	JButton b1,b2,b3,b4,b5,b6;
+	AdminPanel()
+	{
+	Font f=new Font("",5,25);
+	Font f1=new Font("",5,15);
+    setLayout(null); 
+		
+	img=new ImageIcon("user.JPEG");
+	on=img.getImage();
+		
+	img1=new ImageIcon("managecourse1.PNG");
+	on1=img1.getImage();
+	
+	img2=new ImageIcon("icon3.GIF");
+	on2=img2.getImage();
+
+	img3=new ImageIcon("logout1.PNG");
+	on3=img3.getImage();
+	
+	img4=new ImageIcon("users3.PNG");
+	on4=img4.getImage();
+
+	img5=new ImageIcon("verification.PNG");
+	on5=img5.getImage();
+
+	img6=new ImageIcon("password2.PNG");
+	on6=img6.getImage();
+
+	b1=new JButton("MANAGE COURSES");
+	b1.setBackground(Color.black);
+	b1.setForeground(new Color(115,251,253));
+	b1.setBounds(300,220,150,40);
+	b1.setFont(f1);
+	add(b1);
+	
+	b2=new JButton("RESULTS");
+	b2.setBackground(Color.black);
+	b2.setForeground(new Color(115,251,253));
+	b2.setBounds(950,220,150,40);
+	b2.setFont(f);
+	add(b2);
+		
+	b3=new JButton("LOGOUT");
+	b3.setBackground(Color.black);
+	b3.setForeground(new Color(115,251,253));
+	b3.setBounds(1600,220,150,40);
+	b3.setFont(f);
+	add(b3);
+	
+	b4=new JButton("USERS");
+	b4.setBackground(Color.black);
+	b4.setForeground(new Color(115,251,253));
+	b4.setBounds(300,650,150,40);
+	b4.setFont(f);
+	add(b4);
+	
+	b5=new JButton("VERIFICATION");
+	b5.setBackground(Color.black);
+	b5.setForeground(new Color(115,251,253));
+	b5.setBounds(950,650,150,40);
+	b5.setFont(f1);
+	add(b5);
+	
+	b6=new JButton("CHANGE PASSWORD");
+	b6.setBackground(Color.black);
+	b6.setForeground(new Color(115,251,253));
+	b6.setBounds(1600,650,150,40);
+	b6.setFont(f1);
+	add(b6);
+	
+	}
+	 public void paintComponent(Graphics g)
+    {
+	super.paintComponent(g);
+	g.drawImage(on,0,0,2000,1000,this);
+	g.drawImage(on1,100,150,150,150,this);
+	g.drawImage(on2,750,150,150,150,this);
+	g.drawImage(on3,1400,150,150,150,this);
+	g.drawImage(on4,100,600,150,150,this);
+	g.drawImage(on5,750,600,150,150,this);
+	g.drawImage(on6,1400,600,150,150,this);
+    }	
+  
+
+}

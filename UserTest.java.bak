@@ -1,0 +1,166 @@
+import java.awt.*;
+import javax.swing.*;
+class UserTest extends JPanel
+{
+	ButtonGroup bg;
+	JRadioButton rb1,rb2,rb3,rb4;
+	JLabel l,lq,l1,l2,l3,l4,l5,l6;
+	JTextArea t1;
+	JButton b1,b2,b3,b4;
+	
+	ImageIcon img,img1;
+	Image  on,on1;
+    UserTest()
+    {
+						
+	img=new ImageIcon("user.JPEG");
+	on=img.getImage();
+		
+		    img1=new ImageIcon("register1.PNG");
+	on1=img1.getImage();
+	
+    setLayout(null);
+    Font f=new Font("",5,25);
+    Font f1=new Font("",5,20);
+   Font f2=new Font("Arial Black",5,40);
+	
+	
+		
+		l=new JLabel("Test");
+		l.setFont(f2);
+	    l.setForeground(new Color(115,251,253));
+	    l.setBackground(Color.black);
+		l.setBounds(600,70,300,70);
+		add(l);
+		
+		
+		lq=new JLabel("");
+		lq.setFont(f);
+		lq.setForeground(new Color(115,251,253));
+	    lq.setBackground(Color.black);
+		lq.setBounds(300,200,50,30);
+		add(lq);
+		
+		
+	   t1=new JTextArea();
+       t1.setFont(f);
+	   t1.setForeground(new Color(115,251,253));
+	    t1.setBackground(Color.gray);
+	  // t1.setBackground(Color.black);
+	   t1.setBounds(410,200,700,200);
+	   add(t1);
+	
+	
+		bg=new ButtonGroup();
+		
+		rb1=new JRadioButton("A");
+		rb1.setFont(f);
+	    rb1.setForeground(new Color(115,251,253));
+	    rb1.setBackground(Color.black);
+		rb1.setBounds(410,450,50,30);
+		bg.add(rb1);
+		add(rb1);
+		
+		l1=new JLabel("");
+		l1.setFont(f);
+		l1.setForeground(new Color(115,251,253));
+	    l1.setBackground(Color.black);
+		l1.setBounds(470,450,200,30);
+		add(l1);
+		
+		rb2=new JRadioButton("B");
+		rb2.setFont(f);
+	    rb2.setForeground(new Color(115,251,253));
+	    rb2.setBackground(Color.black);
+		rb2.setBounds(790,450,50,30);
+		bg.add(rb2);
+		add(rb2);
+		
+		
+		l2=new JLabel("");
+		l2.setFont(f);
+		l2.setForeground(new Color(115,251,253));
+	    l2.setBackground(Color.black);
+		l2.setBounds(850,450,200,30);
+		add(l2);
+		
+		rb3=new JRadioButton("C");
+		rb3.setFont(f);
+	    rb3.setForeground(new Color(115,251,253));
+	    rb3.setBackground(Color.black);
+		rb3.setBounds(410,600,50,30);
+		bg.add(rb3);
+		add(rb3);
+		
+
+		l3=new JLabel("");
+		l3.setFont(f);
+		l3.setForeground(new Color(115,251,253));
+	    l3.setBackground(Color.black);
+		l3.setBounds(470,600,200,30);
+		add(l3);
+		
+		rb4=new JRadioButton("D");
+		rb4.setFont(f);
+		rb4.setForeground(new Color(115,251,253));
+	    rb4.setBackground(Color.black);
+		rb4.setBounds(790,600,50,30);
+		bg.add(rb4);
+		add(rb4);
+		
+		
+
+		l4=new JLabel("");
+		l4.setFont(f);
+		l4.setForeground(new Color(115,251,253));
+	    l4.setBackground(Color.black);
+		l4.setBounds(850,600,200,30);
+		add(l4);
+		
+		
+		l5=new JLabel("");
+		l5.setFont(f);
+		l5.setForeground(new Color(115,251,253));
+	    l5.setBackground(Color.black);
+		l5.setBounds(410,800,200,30);
+		add(l5);
+		
+		l6=new JLabel("");
+		l6.setFont(f);
+		l6.setForeground(new Color(115,251,253));
+	    l6.setBackground(Color.black);
+		l6.setBounds(790,800,200,30);
+		add(l6);
+		
+		
+		b1=new JButton("PREVIOUS");
+		b1.setFont(f1);
+	    b1.setForeground(new Color(115,251,253));
+	    b1.setBackground(Color.black);
+		b1.setBounds(410,700,150,50);
+		add(b1);
+		
+		b2=new JButton("NEXT");
+		b2.setFont(f);
+		b2.setForeground(new Color(115,251,253));
+	    b2.setBackground(Color.black);
+		b2.setBounds(790,700,150,50);
+		add(b2);
+			
+		b4=new JButton("SUBMIT");
+		b4.setFont(f);
+		b4.setForeground(new Color(115,251,253));
+	    b4.setBackground(Color.black);
+		b4.setBounds(200,850,150,50);
+		add(b4);
+		
+
+    } 
+	 public void paintComponent(Graphics g)
+    {
+	super.paintComponent(g);
+	g.drawImage(on,0,0,2000,1000,this);
+		g.drawImage(on1,1200,350,300,300,this);
+	}
+
+}

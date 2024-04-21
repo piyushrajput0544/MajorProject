@@ -1,0 +1,1 @@
+class A{public static void check(char s[], int n){	int a[]= new int[26];	for(int i=0 ; i<n ; i++)	{		a[s[i]-97]++;	}	for(int i=0 ; i<26 ; i++)	{		if(a[i]!=0)		{			System.out.printf("%c=%d",i+97,a[i]);		}	}}	public static void main(String ar[]){     String s="wwwram";	 check(s,6);}}

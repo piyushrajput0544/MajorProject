@@ -1,0 +1,104 @@
+import java.awt.*;
+import javax.swing.*;
+import java.sql.*;
+class ManageCourses extends JPanel
+{
+	ImageIcon img,img1;
+	Image  on,on1;
+	Choice l1;
+	JButton b1,b2,b3,b4,b5;
+	JLabel l;
+ManageCourses()
+{
+	Font f=new Font("",5,25);
+	Font f1=new Font("",5,25);
+	Font f2=new Font("Arial Black",5,35);
+	setLayout(null); 
+      
+    img=new ImageIcon("user.JPEG");
+	on=img.getImage();
+	
+      img1=new ImageIcon("manage2.PNG");
+	on1=img1.getImage();
+
+     l=new JLabel("MANAGE COURSES");
+		l.setFont(f2);
+		l.setForeground(new Color(115,251,253));
+     	l.setBackground(Color.black);
+		l.setBounds(700,80,500,40);
+		add(l);
+
+     l1=new Choice();
+	l1.setForeground(new Color(115,251,253));
+	l1.setBackground(Color.black);
+
+     l1.setBounds(750,450,300,150);
+	 l1.setFont(f);
+	 try
+	 { 
+	 	Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection con=DriverManager.getConnection("jdbc:mysql:///online","root","root");
+        Statement st=con.createStatement();
+       String s1="select * from course";
+	   //String s1="create table "+s+" (QID varchar(20),QStatement varchar(10000),A varchar(50),B varchar(50),C varchar(50),D varchar(50))";
+	   ResultSet rs=st.executeQuery(s1);
+	   while(rs.next())
+		   l1.add(rs.getString(1));
+	   
+	 }
+	
+	 catch(Exception e1)
+	 {
+		 System.out.println(e1);
+	 }
+	
+	 // l1.add("APPTITUTE");
+	 // l1.add("MATHS");
+	 // l1.add("JAVA");
+	 l1.setBackground(Color.gray);
+	 add(l1);
+	 
+	  b1=new JButton("DELETE");
+	 b1.setFont(f1);
+	 b1.setBounds(750,550,150,40);
+	 b1.setForeground(new Color(115,251,253));
+	b1.setBackground(Color.black);
+
+	 add(b1);
+	 
+	 b2=new JButton("EDIT");
+	 b2.setFont(f1);
+	 b2.setBounds(900,550,150,40);
+	b2.setForeground(new Color(115,251,253));
+	b2.setBackground(Color.black);
+
+	 add(b2);
+	 
+	 b4=new JButton("BACK");
+	 b4.setFont(f1);
+	 b4.setBounds(100,800,150,50);
+	b4.setForeground(new Color(115,251,253));
+	b4.setBackground(Color.black);
+
+	 add(b4);
+	 
+	 b5=new JButton("Add");
+	 b5.setFont(f1);
+	 b5.setBounds(1110,450,150,40);
+	b5.setForeground(new Color(115,251,253));
+	b5.setBackground(Color.black);
+
+	 add(b5);
+	
+	
+}
+ public void paintComponent(Graphics g)
+    {
+	super.paintComponent(g);
+	g.drawImage(on,0,0,2000,1000,this);
+	g.drawImage(on1,760,150,250,250,this);
+	
+    }	
+  
+
+}
